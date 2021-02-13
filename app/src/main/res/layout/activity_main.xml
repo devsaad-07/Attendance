@@ -4,54 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/listen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="Take attendance"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="120dp"
+        android:text="Take Attendance"
+        android:paddingLeft="30dp"
+
+        android:drawableLeft="@drawable/teach"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_button1"/>
 
     <Button
         android:id="@+id/create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/attend"
+        android:layout_height="120dp"
+        android:layout_marginTop="0dp"
         android:text="Mark Attendance"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listen" />
+        app:layout_constraintTop_toBottomOf="@+id/listen"
+        android:paddingLeft="25dp"
+        android:textSize="16dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_button"/>
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:cacheColorHint="#FFFFFF"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp" />
+        />
 
     <EditText
         android:id="@+id/rollNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Roll No."
+        android:hint="Enter your roll. no. here"
         android:inputType="textPersonName"
-        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,25 +72,35 @@
 
     <Button
         android:id="@+id/sendButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
         android:text="Send"
         app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rollNo"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.0"
+        android:textSize="16dp"
+
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_button2"/>
 
     <Button
         android:id="@+id/showList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/show"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/custom_button3"
         android:text="Show List"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        android:paddingLeft="30dp"
         app:layout_constraintBottom_toTopOf="@+id/listen"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016" />
 </androidx.constraintlayout.widget.ConstraintLayout>

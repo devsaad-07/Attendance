@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         sendButton.setVisibility(View.GONE);
         rollNo.setVisibility(View.GONE);
         rollNos = new ArrayList<String>();
+        showList.setVisibility(View.GONE);
 
         bluetoothUtil = new BluetoothUtil();
 
@@ -82,13 +83,16 @@ public class MainActivity extends AppCompatActivity {
         listen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                create.setVisibility(View.GONE);
                 if (flag.equals(false)) {
+                    Toast.makeText(getApplicationContext(), "Started Listening", Toast.LENGTH_LONG).show();
                     listen.setText("End Listening");
                     AcceptThread acceptThread = new AcceptThread();
                     acceptThread.start();
                     flag = true;
                 } else {
                     bluetoothUtil.connected();
+                    showList.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -113,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                listen.setVisibility(View.GONE);
                 if (check.equals(0)) {
                     Set<BluetoothDevice> bt = mAdapter.getBondedDevices();
                     String[] strings = new String[bt.size()];
@@ -162,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String roll = (String) rollNo.getText().toString();
                 bluetoothUtil.writeMessage(roll);
+                rollNo.setHint("Enter your answer");
             }
         });
 

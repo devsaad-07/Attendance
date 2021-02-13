@@ -79,10 +79,10 @@ class BluetoothUtil {
                     // save the connected device's name
                     String message = msg.getData().getString(MESSAGE_READ_TAG);
                     if(message.equals("")){
-                       Toast.makeText(context, "no message", Toast.LENGTH_LONG).show();
+                       //Toast.makeText(context, "no message", Toast.LENGTH_LONG).show();
                     }
                     else{
-                        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(context, message, Toast.LENGTH_LONG).show();
                     }
                     break;
             }
